@@ -34,19 +34,33 @@ python security_headers_checker.py https://example.com
 
 ## Example Output
 
-```text
 Scanning: https://example.com
 
 HTTP Status: 200
+------------------------------------------------------------
+[-] Content-Security-Policy
+    Missing: Helps protect against XSS and content injection attacks.
 
-[+] Content-Security-Policy
+[-] Strict-Transport-Security
+    Missing: Forces browsers to use HTTPS connections.
+
+[-] X-Content-Type-Options
+    Missing: Prevents MIME type sniffing.
+
 [-] X-Frame-Options
+    Missing: Helps prevent clickjacking attacks.
 
+[-] Referrer-Policy
+    Missing: Controls how much referrer information is shared.
+
+[-] Permissions-Policy
+    Missing: Controls access to browser features and APIs.
+
+------------------------------------------------------------
 Security Header Summary
-Present: 4
-Missing: 2
-Basic Header Score: 66%
-```
+Present: 0
+Missing: 6
+Basic Header Score: 0%
 
 ## Skills Practiced
 
